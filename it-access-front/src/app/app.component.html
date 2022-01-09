@@ -1,0 +1,36 @@
+<mat-toolbar>
+  <span style="margin-left: 2em;">IT Access</span>
+</mat-toolbar>
+
+<div id="container" *ngIf="selectedNodes.length > 1">
+  <div id="left">
+    <button mat-mini-fab color="primary" (click)="gotoPreviousNode()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+  </div>
+</div>
+
+<app-node *ngIf="summaries.length === 0; else showSummary" [selections]="selectedNodes"
+  (selected)="onSelectNode($event)">
+</app-node>
+
+<ng-template #showSummary>
+  <mat-card>
+    <mat-card-title>
+      Thank you {{username}}
+    </mat-card-title>
+    <br />
+    <p *ngFor="let summary of summaries">
+      {{summary.question}}: {{summary.answer}}
+    </p>
+    <p>Recommendation: <b>{{recommendation}}</b></p>
+  </mat-card>
+</ng-template>
+
+<div id="container" *ngIf="selectedNodes.length > 1 || summaries.length > 1">
+  <div id="right">
+    <button mat-mini-fab color="primary" (click)="resetSelections()">
+      <mat-icon>refresh</mat-icon>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<mat-card>
+    <mat-card-title *ngIf="currentNode.options && currentNode.options.length > 0; else noOptionAvailable">
+        {{currentNode.text}}
+    </mat-card-title>
+    <ng-template #noOptionAvailable>
+        <mat-card-title>
+            Oops! no option is currently available for your selection
+        </mat-card-title>
+    </ng-template>
+    <br />
+    <mat-card-actions>
+        <button mat-raised-button *ngFor='let option of currentNode.options'
+            (click)='onSlectOption(option.node)'>{{option.text}}</button>
+    </mat-card-actions>
+</mat-card>

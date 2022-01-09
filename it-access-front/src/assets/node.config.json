@@ -1,0 +1,218 @@
+[
+    {
+        "id": "root",
+        "text": "What is your infrastructure type?",
+        "options": [
+            {
+                "node": "onprem",
+                "text": "On premise"
+            },
+            {
+                "node": "cloud",
+                "text": "Cloud"
+            }
+        ]
+    },
+    {
+        "id": "onprem",
+        "text": "What kind of access you need?",
+        "options": [
+            {
+                "node": "m2m",
+                "text": "Machine to Machine (M2M)"
+            },
+            {
+                "node": "u2m",
+                "text": "User to Machine (U2M)"
+            }
+        ]
+    },
+    {
+        "id": "cloud",
+        "options": []
+    },
+    {
+        "id": "m2m",
+        "text": "Is it acitve directory aware?",
+        "options": [
+            {
+                "node": "m2m-ad-aware-yes",
+                "text": "Yes"
+            },
+            {
+                "node": "m2m-ad-aware-no",
+                "text": "No"
+            }
+        ]
+    },
+    {
+        "id": "m2m-ad-aware-yes",
+        "text": "Do you need it for windows service only?",
+        "options": [
+            {
+                "node": "win-svc-only-yes",
+                "text": "Yes"
+            },
+            {
+                "node": "win-svc-only-no",
+                "text": "No"
+            }
+        ]
+    },
+    {
+        "id": "win-svc-only-yes",
+        "value": "xMSA"
+    },
+    {
+        "id": "win-svc-only-no",
+        "text": "Do you need for additionally running IIS aplication pool only?",
+        "options": [
+            {
+                "node": "add-iis-pool-yes",
+                "text": "Yes"
+            },
+            {
+                "node": "add-iis-pool-no",
+                "text": "No"
+            }
+        ]
+    },
+    {
+        "id": "add-iis-pool-yes",
+        "value": "xMSA"
+    },
+    {
+        "id": "add-iis-pool-no",
+        "text": "Do you need for additionally running scheduled tasks only?",
+        "options": [
+            {
+                "node": "add-sch-task-yes",
+                "text": "Yes"
+            },
+            {
+                "node": "add-sch-task-no",
+                "text": "No"
+            }
+        ]
+    },
+    {
+        "id": "add-sch-task-yes",
+        "value": "xMSA"
+    },
+    {
+        "id": "add-sch-task-no",
+        "text": "Do you need for additionally running SSRS only?",
+        "options": [
+            {
+                "node": "add-ssrs-yes",
+                "text": "Yes"
+            },
+            {
+                "node": "add-ssrs-no",
+                "text": "No"
+            }
+        ]
+    },
+    {
+        "id": "add-ssrs-yes",
+        "value": "xMSA"
+    },
+    {
+        "id": "add-ssrs-no",
+        "text": "Do you need scripted hard-coded credentials?",
+        "options": [
+            {
+                "node": "scpt-hard-code-cred-yes",
+                "text": "Yes"
+            },
+            {
+                "node": "scpt-hard-code-cred-no",
+                "text": "No"
+            }
+        ]
+    },
+    {
+        "id": "scpt-hard-code-cred-yes",
+        "value": "Service Account Managed by ITPA Leveraging AAM"
+    },
+    {
+        "id": "scpt-hard-code-cred-no",
+        "text": "Do you need application hard-coded credentials?",
+        "options": [
+            {
+                "node": "appl-hard-code-cred-yes",
+                "text": "Yes"
+            },
+            {
+                "node": "appl-hard-code-cred-no",
+                "text": "No"
+            }
+        ]
+    },
+    {
+        "id": "appl-hard-code-cred-yes",
+        "value": "Service Account Stored in ITPA Following PAGE"
+    },
+    {
+        "id": "m2m-ad-aware-no",
+        "text": "Do you need ITPA connector for application?",
+        "options": [
+            {
+                "node": "itpa-for-app-yes",
+                "text": "Yes"
+            },
+            {
+                "node": "itpa-for-app-no",
+                "text": "No"
+            }
+        ]
+    },
+    {
+        "id": "itpa-for-app-yes",
+        "value": "Service Account Managed by ITPA"
+    },
+    {
+        "id": "itpa-for-app-no",
+        "value": "Request Connector & Store Account in ITPA Following PAGE"
+    },
+    {
+        "id": "u2m",
+        "text": "Is it acitve directory aware?",
+        "options": [
+            {
+                "node": "u2m-ad-aware-yes",
+                "text": "Yes"
+            },
+            {
+                "node": "u2m-ad-aware-no",
+                "text": "No"
+            }
+        ]
+    },
+    {
+        "id": "u2m-ad-aware-yes",
+        "value": "Pooled Account Managed by ITPA"
+    },
+    {
+        "id": "u2m-ad-aware-no",
+        "text": "Do you need ITPA connector for application?",
+        "options": [
+            {
+                "node": "itpa-connector-yes",
+                "text": "Yes"
+            },
+            {
+                "node": "itpa-connector-no",
+                "text": "No"
+            }
+        ]
+    },
+    {
+        "id": "itpa-connector-yes",
+        "value": "Pooled Account Managed by ITPA"
+    },
+    {
+        "id": "itpa-connector-no",
+        "value": "Request Connector & Store Account in ITPA Following PAGE"
+    }
+]

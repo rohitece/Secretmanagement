@@ -1,0 +1,19 @@
+<h2>Summary</h2>
+<div mat-dialog-content>
+    <p *ngFor="let summary of summaries">
+        {{summary.question}}: {{summary.answer}}
+    </p>
+    <p>Recommendation: <b>{{recommendation}}</b></p>
+</div>
+
+<form>
+    <mat-form-field appearance="fill">
+        <mat-label>Enter username to continue</mat-label>
+        <input matInput (input)="setUsername($event)">
+    </mat-form-field>
+</form>
+
+<div mat-dialog-actions>
+    <button mat-button (click)="onCancelClick()">Cancel</button>
+    <button mat-button (click)="onConfirmClick()" [disabled]="!username" cdkFocusInitial>Confirm</button>
+</div>
